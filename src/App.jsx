@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom"
 import Home from "./assets/pages/Home"
 import Search from "./assets/pages/Search"
 import Layout from "./assets/pages/Layout"
+import NotFound from "./assets/pages/NotFound"
 import stationsJson from "../stations.json"
 
 function App() {
@@ -200,6 +201,7 @@ function App() {
               }
             />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Grid>
     </div>

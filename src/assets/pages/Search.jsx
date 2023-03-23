@@ -23,7 +23,8 @@ export default function Search(props) {
           Unfortunately we have not been able to find a route for your selected
           journey and modes.
           <br />
-          <br /> It could be that your desired mode is unavailable.
+          <br />
+          It could be that your desired mode is unavailable.
           <br />
           <br /> Please try searching with different modes.
         </Typography>
