@@ -58,8 +58,15 @@ export default function Cards(props) {
     },
   ]
   return (
-    <Grid container>
-      <Grid item xs={12} sx={{ padding: "1rem" }}>
+    <Grid
+      container
+      sx={{
+        background:
+          "linear-gradient(180deg, rgba(255,255,255,1) 15%, rgba(238,238,238,1) 100%)",
+        padding: "0 1rem 1rem 1rem",
+      }}
+    >
+      <Grid item xs={12} sx={{ padding: "2rem 1rem 1rem 1rem" }}>
         <Typography component={"div"}>
           <h2>Not sure where to go? Try one of these great destinations!</h2>
         </Typography>

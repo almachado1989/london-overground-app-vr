@@ -37,7 +37,6 @@ export const searchButtonStyle = {
 }
 
 export const boxStyle = {
-  width: "fit-content",
   height: "100dvh",
   backgroundColor: "primary.dark",
   position: "sticky",

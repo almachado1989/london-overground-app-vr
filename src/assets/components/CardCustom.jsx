@@ -45,7 +45,10 @@ export default function CardCustom(props) {
         <Button
           onClick={handleClick}
           size="small"
-          sx={{ color: theme.palette.secondary.main }}
+          sx={{
+            color: theme.palette.secondary.main,
+            position: "unset",
+          }}
         >
           {props.card.buttonText}
         </Button>

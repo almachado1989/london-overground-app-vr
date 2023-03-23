@@ -14,7 +14,7 @@ export default function Layout(props) {
 
   return (
     <>
-      <Grid className="sidebar" item xs="auto">
+      <Grid className="sidebar" item xs={12} sm="auto">
         <Box sx={boxStyle}>
           {props.stations && props.stationFrom && props.stationTo && (
             <StationSelector

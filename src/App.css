@@ -168,6 +168,11 @@ input,
   border-radius: 50%;
 }
 
+.line-status {
+  margin: 0 auto;
+  width: 332px;
+}
+
 .line-status-entry {
   position: relative;
   display: grid;
@@ -200,6 +205,7 @@ input,
   padding: 0.25rem;
   border-radius: 4px;
   background-color: var(--piccadilly);
+  z-index: 99999;
 }
 
 .not-found-image {

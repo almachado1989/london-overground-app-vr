@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material"
+import { Typography, Box } from "@mui/material"
 import { useState } from "react"
 import { getFirstWord } from "../../functions/helpers"
 
@@ -25,7 +25,9 @@ export default function LineStatusElement(props) {
         {props.journeyNow && <>{props.line.status}</>}
       </span>
       {showDetails && props.line.details && (
-        <p className="line-status-details">{props.line.details}</p>
+        <Box className="line-status-details">
+          <p>{props.line.details}</p>
+        </Box>
       )}
     </Typography>
   )
