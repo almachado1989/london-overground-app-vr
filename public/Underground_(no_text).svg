@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+<title>London Underground</title>
+<circle cx="250" cy="250" r="174.7" stroke="#dc241f" stroke-width="73.1" fill="none" />
+<path d="M 0,250 H 500" stroke="#0019a8" stroke-width="81.25" />
+</svg>
