@@ -5,11 +5,13 @@ import {
   CardMedia,
   Button,
   Typography,
+  useTheme,
 } from "@mui/material"
 import { useNavigate } from "react-router-dom"
 
 export default function CardCustom(props) {
   const navigate = useNavigate()
+  const theme = useTheme()
 
   function handleClick() {
     const stationTo = props.stations.filter((station) => {
@@ -40,7 +42,11 @@ export default function CardCustom(props) {
         </Typography>
       </CardContent>
       <CardActions sx={{ marginTop: "auto" }}>
-        <Button onClick={handleClick} size="small">
+        <Button
+          onClick={handleClick}
+          size="small"
+          sx={{ color: theme.palette.secondary.main }}
+        >
           {props.card.buttonText}
         </Button>
       </CardActions>

@@ -1,5 +1,4 @@
 import { Grid, LinearProgress, Typography } from "@mui/material"
-import JourneyNextPrev from "../components/JourneyNextPrev"
 import JourneyGraphic from "../components/JourneyGraphic"
 
 export default function Search(props) {
