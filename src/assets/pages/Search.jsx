@@ -17,7 +17,16 @@ export default function Search(props) {
         </>
       )}
       {props.error && (
-        <Typography>Something went wrong, please try again</Typography>
+        <Typography
+          sx={{ padding: "4rem", fontSize: "20px", fontWeight: "bold" }}
+        >
+          Unfortunately we have not been able to find a route for your selected
+          journey and modes.
+          <br />
+          <br /> It could be that your desired mode is unavailable.
+          <br />
+          <br /> Please try searching with different modes.
+        </Typography>
       )}
     </Grid>
   )

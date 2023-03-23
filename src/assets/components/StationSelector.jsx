@@ -27,6 +27,11 @@ export default function StationSelector(props) {
         handleChange={(event, newValue) => {
           if (newValue) {
             if (scumCheck(newValue)) return
+            if (newValue.stopId === props.stationTo.stopId) {
+              props.setStationTo(props.stationFrom)
+              props.setStationFrom(newValue)
+              return
+            }
             props.setStationFrom(newValue)
             return
           }
@@ -39,10 +44,16 @@ export default function StationSelector(props) {
 
       <Dropdown
         handleChange={(event, newValue) => {
+          if (newValue.stopId === props.stationFrom.stopId) {
+            props.setStationFrom(props.stationTo)
+            props.setStationTo(newValue)
+            return
+          }
           if (newValue) {
             props.setStationTo(newValue)
             return
           }
+
           props.setStationTo(noStation)
         }}
         stations={props.stations}
