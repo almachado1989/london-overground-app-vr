@@ -1,0 +1,203 @@
+:root {
+  --bakerloo: #b36305;
+  --central: #e32017;
+  --circle: #ffd300;
+  --district: #00782a;
+  --elizabeth: #9364cd;
+  --hammersmith: #f3a9bb;
+  --jubilee: #a0a5a9;
+  --metropolitan: #9b0056;
+  --northern: #000000;
+  --piccadilly: #003688;
+  --victoria: #0098d4;
+  --waterloo: #95cdba;
+  --dlr: #00a4a7;
+  --london: #ee7c0e;
+}
+
+input,
+.MuiAutocomplete-listbox {
+  text-transform: capitalize;
+}
+
+.line {
+  position: relative;
+  left: calc(100% - 4px);
+  width: 100%;
+  border-left: 8px dashed;
+  border-color: #000;
+  transform: translateX(-50%);
+  min-height: 4rem;
+  padding-left: 5vw;
+  padding-block: 1rem;
+}
+
+.Bakerloo {
+  border-color: var(--bakerloo);
+  border-left-style: solid;
+}
+.Central {
+  border-color: var(--central);
+  border-left-style: solid;
+}
+.Circle {
+  border-color: var(--circle);
+  border-left-style: solid;
+}
+.District {
+  border-color: var(--district);
+  border-left-style: solid;
+}
+.Elizabeth {
+  border-color: var(--elizabeth);
+  border-left-style: solid;
+}
+.Hammersmith {
+  border-color: var(--hammersmith);
+  border-left-style: solid;
+}
+.Jubilee {
+  border-color: var(--jubilee);
+  border-left-style: solid;
+}
+.Metropolitan {
+  border-color: var(--metropolitan);
+  border-left-style: solid;
+}
+.Northern {
+  border-color: var(--northern);
+  border-left-style: solid;
+}
+.Piccadilly {
+  border-color: var(--piccadilly);
+  border-left-style: solid;
+}
+.Victoria {
+  border-color: var(--victoria);
+  border-left-style: solid;
+}
+.Waterloo {
+  border-color: var(--waterloo);
+  border-left-style: solid;
+}
+.DLR {
+  border-color: var(--dlr);
+  border-left-style: solid;
+}
+
+.London {
+  border-color: var(--london);
+  border-left-style: solid;
+}
+
+.line-status-simple {
+  background-color: #000;
+  transition: background-color 0.1s;
+}
+
+.good {
+  background-color: rgb(73, 176, 73);
+}
+
+.minor {
+  background-color: #e9cd16;
+}
+
+.severe {
+  background-color: rgb(187, 53, 53);
+}
+
+.part {
+  background-color: rgb(119, 113, 113);
+}
+
+.suspended {
+  background-color: black;
+}
+
+.form-wrapper {
+  display: grid;
+  padding: 1rem;
+  position: relative;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.journey-next-prev {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 1rem;
+  padding-inline: 5vw;
+}
+
+.next {
+  align-self: flex-end;
+}
+
+.previous {
+  margin-right: auto;
+}
+
+.journey-graphic {
+  padding-bottom: 2rem;
+}
+
+.journey-leg {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 5rem;
+}
+
+.journey-header {
+  display: grid;
+  align-items: center;
+  width: 40%;
+  text-align: end;
+}
+
+.journey-details {
+  width: 40%;
+}
+
+.circle {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border: 8px solid #000;
+  border-radius: 50%;
+}
+
+.line-status-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-block: 1px solid white;
+  min-height: 1rem;
+}
+
+.line-status-entry:first-child {
+  border-top: 0;
+}
+
+.line-status-entry:last-child {
+  border-bottom: 0;
+}
+
+.line-status-entry > span {
+  padding: 0.075rem 0.25rem;
+}
+
+.line-status-simple:hover {
+  background-color: #7c7c7c;
+}
+
+.line-status-details {
+  position: absolute;
+  right: -18vw;
+  bottom: 1vw;
+  width: 20vw;
+  padding: 0.25rem;
+  border-radius: 4px;
+  background-color: var(--piccadilly);
+}
