@@ -27,6 +27,7 @@ export default function Nav() {
           <img
             src="./Underground_(no_text).svg"
             width={40}
+            height={40}
             alt="underground logo"
           />
         </IconButton>
