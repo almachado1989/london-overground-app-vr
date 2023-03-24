@@ -6,7 +6,7 @@ export default function LineStatusElement(props) {
   const [showDetails, setShowDetails] = useState(false)
   return (
     <Typography
-      sx={{ color: "white" }}
+      // sx={{ color: "white" }}
       component={"div"}
       className="line-status-entry"
     >

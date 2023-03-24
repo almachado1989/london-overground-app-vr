@@ -32,6 +32,15 @@ input,
   padding-block: 1rem;
 }
 
+.line-status-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-block: 1px solid white;
+  min-height: 1rem;
+  color: white;
+}
+
 .Bakerloo {
   border-color: var(--bakerloo);
   border-left-style: solid;
@@ -180,14 +189,6 @@ input,
 .line-status {
   margin: 0 auto;
   width: 332px;
-}
-
-.line-status-entry {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-block: 1px solid white;
-  min-height: 1rem;
 }
 
 .line-status-entry:first-child {
