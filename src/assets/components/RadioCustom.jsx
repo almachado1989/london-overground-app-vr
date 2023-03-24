@@ -8,6 +8,7 @@ export default function RadioCustom(props) {
       control={<Radio />}
       label={props.label}
       sx={radioStyle}
+      aria-label={props.label}
     />
   )
 }

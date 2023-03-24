@@ -32,6 +32,7 @@ export default function CardCustom(props) {
         component={"img"}
         sx={{ aspectRatio: "16 / 9" }}
         image={props.card.image}
+        alt={"Photo of " + props.card.header}
       />
       <CardContent>
         <Typography gutterBottom variant="h6" component="div">

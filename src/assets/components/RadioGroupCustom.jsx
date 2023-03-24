@@ -10,8 +10,16 @@ export default function RadioGroupCustom(props) {
       value={props.state}
       onChange={() => props.setState((prevState) => !prevState)}
     >
-      <RadioCustom value={true} label={props.label[0]} />
-      <RadioCustom value={false} label={props.label[1]} />
+      <RadioCustom
+        value={true}
+        label={props.label[0]}
+        aria-label={props.label[0]}
+      />
+      <RadioCustom
+        value={false}
+        label={props.label[1]}
+        aria-label={props.label[1]}
+      />
     </RadioGroup>
   )
 }

@@ -25,7 +25,7 @@ export default function Nav() {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Route Planner
         </Typography>
-        <Button onClick={() => navigate("/")} color="inherit">
+        <Button aria-label="Home" onClick={() => navigate("/")} color="inherit">
           Home
         </Button>
       </Toolbar>

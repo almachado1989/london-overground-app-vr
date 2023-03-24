@@ -64,11 +64,12 @@ export default function StationSelector(props) {
       {props.stationFrom.stopName === "" ||
       props.stationTo.stopName === "" ||
       props.modes.length < 1 ? (
-        <Button disabled variant="outlined">
+        <Button aria-label="search" disabled variant="outlined">
           Search
         </Button>
       ) : (
         <Button
+          aria-label="search"
           onClick={
             props.journeyNow
               ? () => {
