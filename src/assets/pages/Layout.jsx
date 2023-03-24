@@ -5,7 +5,6 @@ import { boxStyle } from "../../styles/styleVariables"
 import Nav from "../components/Nav"
 import { Suspense, useEffect, useMemo, useRef } from "react"
 import { lazy } from "react"
-import { useLocation } from "react-router-dom"
 
 export default function Layout(props) {
   const LineStatus = useMemo(
@@ -14,14 +13,12 @@ export default function Layout(props) {
   )
   const gridRef = useRef()
   const theme = useTheme()
-  const route = useLocation()
   const query = useMediaQuery(theme.breakpoints.down("sm"))
   function style() {
     if (query) return { marginTop: "56px" }
   }
 
   useEffect(() => {
-    console.log(route)
     gridRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
   }, [props.loading])
 

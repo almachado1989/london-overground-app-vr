@@ -7,7 +7,9 @@ export default function Search(props) {
       {props.loading && (
         <>
           <LinearProgress />
-          <Typography sx={{ color: "white" }}>Loading</Typography>
+          <Typography sx={{ color: "white", userSelect: "none" }}>
+            Loading
+          </Typography>
         </>
       )}
       {props.journey && !props.loading && !props.error && (
