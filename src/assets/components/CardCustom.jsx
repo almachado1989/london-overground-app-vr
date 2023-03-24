@@ -30,6 +30,8 @@ export default function CardCustom(props) {
     <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
       <CardMedia
         component={"img"}
+        width={320}
+        height={180}
         sx={{ aspectRatio: "16 / 9" }}
         image={props.card.image}
         alt={"Photo of " + props.card.header}
