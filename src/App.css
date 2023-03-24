@@ -15,10 +15,6 @@
   --london: #ee7c0e;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 input,
 .MuiAutocomplete-listbox {
   text-transform: capitalize;
@@ -26,8 +22,8 @@ input,
 
 .line {
   position: relative;
-  left: calc(100% - 4px);
-  width: 100%;
+  left: calc(75% - 4px);
+  width: 50%;
   border-left: 8px dashed;
   border-color: #000;
   transform: translateX(-50%);

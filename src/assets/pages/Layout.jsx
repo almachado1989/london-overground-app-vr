@@ -4,6 +4,7 @@ import StationSelector from "../components/StationSelector"
 import Nav from "../components/Nav"
 import { Suspense, useEffect, useMemo, useRef } from "react"
 import { lazy } from "react"
+import { boxStyle } from "../../styles/styleVariables"
 
 export default function Layout(props) {
   const LineStatus = useMemo(
@@ -29,15 +30,6 @@ export default function Layout(props) {
   function boxHeight() {
     if (query) return "calc(100dvh - 56px)"
     else return "100dvh"
-  }
-
-  const boxStyle = {
-    height: boxHeight(),
-    backgroundColor: "primary.dark",
-    position: "sticky",
-    top: 0,
-    display: "grid",
-    alignContent: "space-between",
   }
 
   return (

@@ -42,3 +42,12 @@ export const checkboxStyle = {
   "& .MuiCheckbox-root": { color: "rgba(255, 255, 255, 0.8)" },
   "& .MuiCheckbox-root.Mui-checked": { color: "rgba(255, 255, 255, 0.8)" },
 }
+
+export const boxStyle = {
+  minHeight: "100dvh",
+  backgroundColor: "primary.dark",
+  position: "sticky",
+  top: 0,
+  display: "grid",
+  alignContent: "space-between",
+}
