@@ -67,7 +67,12 @@ export default function Layout(props) {
           </Suspense>
         </Box>
       </Grid>
-      <Grid ref={gridRef} sx={{ minHeight: "100dvh" }} item xs>
+      <Grid
+        ref={gridRef}
+        sx={{ minHeight: "100dvh", scrollMargin: "56px" }}
+        item
+        xs
+      >
         <Nav navPosition={query ? "fixed" : "sticky"} />
         <Outlet />
       </Grid>

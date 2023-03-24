@@ -13,7 +13,9 @@ export default function Nav(props) {
     <AppBar
       position={props.navPosition}
       sx={{
-        top: "0px",
+        top: "0",
+        left: "0",
+        maxWidth: "100vw",
         boxShadow: "none",
         backgroundColor: theme.palette.primary.light,
       }}

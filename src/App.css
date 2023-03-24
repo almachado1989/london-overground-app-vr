@@ -15,6 +15,10 @@
   --london: #ee7c0e;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 input,
 .MuiAutocomplete-listbox {
   text-transform: capitalize;
