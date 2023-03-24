@@ -35,6 +35,7 @@ input,
 .Bakerloo {
   border-color: var(--bakerloo);
   border-left-style: solid;
+  color: black;
 }
 .Central {
   border-color: var(--central);
@@ -43,6 +44,7 @@ input,
 .Circle {
   border-color: var(--circle);
   border-left-style: solid;
+  color: black;
 }
 .District {
   border-color: var(--district);
@@ -55,10 +57,12 @@ input,
 .Hammersmith {
   border-color: var(--hammersmith);
   border-left-style: solid;
+  color: black;
 }
 .Jubilee {
   border-color: var(--jubilee);
   border-left-style: solid;
+  color: black;
 }
 .Metropolitan {
   border-color: var(--metropolitan);
@@ -75,19 +79,23 @@ input,
 .Victoria {
   border-color: var(--victoria);
   border-left-style: solid;
+  color: black;
 }
 .Waterloo {
   border-color: var(--waterloo);
   border-left-style: solid;
+  color: black;
 }
 .DLR {
   border-color: var(--dlr);
   border-left-style: solid;
+  color: black;
 }
 
 .London {
   border-color: var(--london);
   border-left-style: solid;
+  color: black;
 }
 
 .line-status-simple {
@@ -96,11 +104,12 @@ input,
 }
 
 .good {
-  background-color: rgb(73, 176, 73);
+  background-color: rgb(49, 105, 49);
 }
 
 .minor {
   background-color: #e9cd16;
+  color: black;
 }
 
 .severe {

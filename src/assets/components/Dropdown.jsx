@@ -27,7 +27,7 @@ export default function Dropdown(props) {
     <div>
       <Autocomplete
         disablePortal
-        id="stationFrom"
+        id={"station " + props.label}
         options={props.stations}
         getOptionLabel={(option) => option.stopName}
         value={props.value}

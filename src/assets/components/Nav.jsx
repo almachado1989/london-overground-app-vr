@@ -19,8 +19,16 @@ export default function Nav() {
       }}
     >
       <Toolbar>
-        <IconButton onClick={() => navigate("/")} sx={{ mr: 2 }}>
-          <img src="./Underground_(no_text).svg" width={40} />
+        <IconButton
+          aria-label="home"
+          onClick={() => navigate("/")}
+          sx={{ mr: 2 }}
+        >
+          <img
+            src="./Underground_(no_text).svg"
+            width={40}
+            alt="underground logo"
+          />
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Route Planner

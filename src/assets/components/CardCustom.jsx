@@ -44,6 +44,7 @@ export default function CardCustom(props) {
       </CardContent>
       <CardActions sx={{ marginTop: "auto" }}>
         <Button
+          aria-label={"search journey to " + props.card.header}
           onClick={handleClick}
           size="small"
           sx={{
