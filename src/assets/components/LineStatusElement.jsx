@@ -1,15 +1,14 @@
-import { Typography, Box } from "@mui/material"
+import { Typography, Box, useMediaQuery, useTheme } from "@mui/material"
 import { useState } from "react"
 import { getFirstWord } from "../../functions/helpers"
 
 export default function LineStatusElement(props) {
   const [showDetails, setShowDetails] = useState(false)
+  const theme = useTheme()
+  const query = useMediaQuery(theme.breakpoints.up("sm"))
+
   return (
-    <Typography
-      // sx={{ color: "white" }}
-      component={"div"}
-      className="line-status-entry"
-    >
+    <Typography component={"div"} className="line-status-entry">
       <span
         className={props.line.line}
         style={{
@@ -25,7 +24,7 @@ export default function LineStatusElement(props) {
       >
         {props.journeyNow && <>{props.line.status}</>}
       </span>
-      {showDetails && props.line.details && (
+      {showDetails && props.line.details && query && (
         <Box className="line-status-details">
           <p>{props.line.details}</p>
         </Box>

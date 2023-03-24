@@ -17,7 +17,6 @@ export default function Home(props) {
           searchRoute={props.searchRoute}
           stationTo={props.stationTo}
           stationFrom={props.stationFrom}
-          modes={props.modes}
         />
       </Suspense>
     </Grid>

@@ -188,7 +188,7 @@ input,
 
 .line-status {
   margin: 0 auto;
-  width: 332px;
+  width: 100%;
 }
 
 .line-status-entry:first-child {

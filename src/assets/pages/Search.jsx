@@ -4,7 +4,12 @@ import JourneyGraphic from "../components/JourneyGraphic"
 export default function Search(props) {
   return (
     <Grid item xs>
-      {props.loading && <LinearProgress />}
+      {props.loading && (
+        <>
+          <LinearProgress />
+          <Typography sx={{ color: "white" }}>Loading</Typography>
+        </>
+      )}
       {props.journey && !props.loading && !props.error && (
         <>
           <JourneyGraphic

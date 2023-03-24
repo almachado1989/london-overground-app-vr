@@ -1,6 +1,6 @@
 import "./App.css"
 import { MODES } from "./variables/global"
-import { useEffect, useState } from "react"
+import { useEffect, useState, createContext } from "react"
 import dayjs from "dayjs"
 import utc from "dayjs/plugin/utc"
 import { Grid } from "@mui/material"
@@ -11,6 +11,7 @@ import Search from "./assets/pages/Search"
 import Layout from "./assets/pages/Layout"
 import NotFound from "./assets/pages/NotFound"
 import stationsJson from "../stations.json"
+export const ModesContext = createContext(null)
 
 function App() {
   dayjs.extend(utc)
@@ -149,61 +150,63 @@ function App() {
 
   return (
     <div className="App">
-      <Grid container>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Layout
-                stations={stations}
-                stationTo={stationTo}
-                stationFrom={stationFrom}
-                setStationTo={setStationTo}
-                setStationFrom={setStationFrom}
-                searchRoute={searchRoute}
-                searchLater={searchLater}
-                journeyTime={journeyTime}
-                setJourneyTime={setJourneyTime}
-                journeyNow={journeyNow}
-                setJourneyNow={setJourneyNow}
-                modes={modes}
-                setModes={setModes}
-                timeIsDeparting={timeIsDeparting}
-                settimeIsDeparting={settimeIsDeparting}
-              />
-            }
-          >
+      <ModesContext.Provider value={modes}>
+        <Grid container>
+          <Routes>
             <Route
-              index
+              path="/"
               element={
-                <Home
+                <Layout
                   stations={stations}
-                  location={location}
                   stationTo={stationTo}
                   stationFrom={stationFrom}
                   setStationTo={setStationTo}
+                  setStationFrom={setStationFrom}
                   searchRoute={searchRoute}
-                  modes={modes}
-                />
-              }
-            />
-            <Route
-              path="/search"
-              element={
-                <Search
-                  loading={loading}
-                  journey={journey}
-                  setJourneyIndex={setJourneyIndex}
                   searchLater={searchLater}
-                  error={error}
-                  journeyIndex={journeyIndex}
+                  journeyTime={journeyTime}
+                  setJourneyTime={setJourneyTime}
+                  journeyNow={journeyNow}
+                  setJourneyNow={setJourneyNow}
+                  setModes={setModes}
+                  timeIsDeparting={timeIsDeparting}
+                  settimeIsDeparting={settimeIsDeparting}
+                  loading={loading}
                 />
               }
-            />
-          </Route>
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Grid>
+            >
+              <Route
+                index
+                element={
+                  <Home
+                    stations={stations}
+                    location={location}
+                    stationTo={stationTo}
+                    stationFrom={stationFrom}
+                    setStationTo={setStationTo}
+                    searchRoute={searchRoute}
+                  />
+                }
+              />
+
+              <Route
+                path="/search"
+                element={
+                  <Search
+                    loading={loading}
+                    journey={journey}
+                    setJourneyIndex={setJourneyIndex}
+                    searchLater={searchLater}
+                    error={error}
+                    journeyIndex={journeyIndex}
+                  />
+                }
+              />
+            </Route>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Grid>
+      </ModesContext.Provider>
     </div>
   )
 }

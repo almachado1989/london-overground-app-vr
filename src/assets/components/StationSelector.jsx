@@ -6,10 +6,13 @@ import { checkboxStyle, searchButtonStyle } from "../../styles/styleVariables"
 import { useNavigate } from "react-router-dom"
 import CheckboxCustom from "./CheckboxCustom"
 import { MODES } from "../../variables/global"
+import { useContext } from "react"
+import { ModesContext } from "../../App"
 
 export default function StationSelector(props) {
   const noStation = { stopName: "", stopId: "" }
   const navigate = useNavigate()
+  const modes = useContext(ModesContext)
 
   function scumCheck(newValue) {
     if (newValue.stopName === "arsenal") {
@@ -63,7 +66,7 @@ export default function StationSelector(props) {
 
       {props.stationFrom.stopName === "" ||
       props.stationTo.stopName === "" ||
-      props.modes.length < 1 ? (
+      modes.length < 1 ? (
         <Button aria-label="search" disabled variant="outlined">
           Search
         </Button>
@@ -90,12 +93,7 @@ export default function StationSelector(props) {
       <FormGroup row sx={checkboxStyle}>
         {MODES.map((mode, idx) => {
           return (
-            <CheckboxCustom
-              key={mode}
-              modes={props.modes}
-              setModes={props.setModes}
-              value={mode}
-            />
+            <CheckboxCustom key={mode} setModes={props.setModes} value={mode} />
           )
         })}
       </FormGroup>

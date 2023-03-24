@@ -1,7 +1,17 @@
-import { Grid, Typography } from "@mui/material"
+import { Grid, Typography, Snackbar, Alert, useTheme } from "@mui/material"
 import CardCustom from "./CardCustom"
+import { useState } from "react"
 
 export default function Cards(props) {
+  const [snackbarOpen, setSnackbarOpen] = useState(false)
+  const theme = useTheme()
+
+  function handleClose(event, reason) {
+    if (reason === "clickaway") {
+      return
+    }
+    setSnackbarOpen(false)
+  }
   const cardContent = [
     {
       header: "Oxford Street",
@@ -88,12 +98,27 @@ export default function Cards(props) {
                 stations={props.stations}
                 location={props.location}
                 searchRoute={props.searchRoute}
-                modes={props.modes}
+                setSnackbarOpen={setSnackbarOpen}
               />
             </Grid>
           )
         })}
       </Grid>
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+      >
+        <Alert
+          variant="filled"
+          onClose={handleClose}
+          severity="info"
+          sx={{ width: "100%", backgroundColor: theme.palette.secondary.dark }}
+        >
+          Please select a mode
+        </Alert>
+      </Snackbar>
     </Grid>
   )
 }

@@ -6,12 +6,12 @@ import { IconButton } from "@mui/material"
 import { useNavigate } from "react-router-dom"
 import { useTheme } from "@emotion/react"
 
-export default function Nav() {
+export default function Nav(props) {
   const theme = useTheme()
   const navigate = useNavigate()
   return (
     <AppBar
-      position="sticky"
+      position={props.navPosition}
       sx={{
         top: "0px",
         boxShadow: "none",

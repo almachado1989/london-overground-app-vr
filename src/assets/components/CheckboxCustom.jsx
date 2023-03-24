@@ -1,16 +1,18 @@
 import { Checkbox, FormControlLabel } from "@mui/material"
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { ModesContext } from "../../App"
 
 export default function CheckboxCustom(props) {
+  const modes = useContext(ModesContext)
   const [checked, setChecked] = useState(true)
   function handleChange() {
     if (checked === false) {
-      const addedModes = [...props.modes, props.value]
+      const addedModes = [...modes, props.value]
       props.setModes(addedModes)
     }
     if (checked === true) {
-      props.modes.splice(props.modes.indexOf(props.value), 1)
-      props.setModes([...props.modes])
+      modes.splice(modes.indexOf(props.value), 1)
+      props.setModes([...modes])
     }
     setChecked(!checked)
   }
