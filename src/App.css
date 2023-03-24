@@ -223,3 +223,28 @@ input,
   width: 100%;
   height: calc(100% - 64px);
 }
+
+@media (max-width: 800px) {
+  .journey-graphic li,
+  .journey-graphic button,
+  .journey-graphic .MuiTypography-root,
+  .journey-header,
+  .journey-details,
+  .line-status {
+    font-size: 0.825rem;
+  }
+
+  .circle {
+    width: 2rem;
+    height: 2rem;
+    border-width: 6px;
+  }
+  .line {
+    border-width: 6px;
+    min-height: 3rem;
+    left: calc(75% - 3px);
+  }
+  .graphic-inner {
+    padding-inline: 1rem;
+  }
+}

@@ -23,7 +23,7 @@ export default function JourneyGraphic(props) {
         const journeyLine = journeyDetails.substr(0, index)
         const journeyDirection = journeyDetails.substr(index + 1)
         return (
-          <div key={idx}>
+          <div className="graphic-inner" key={idx}>
             <Typography className="journey-leg" component={"div"}>
               <div className="journey-header">
                 <h3>{journeyLine}</h3>
