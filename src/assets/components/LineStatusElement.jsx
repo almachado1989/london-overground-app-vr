@@ -11,6 +11,7 @@ export default function LineStatusElement(props) {
       className="line-status-entry"
     >
       <span
+        className={props.line.line}
         style={{
           backgroundColor: `var(--${getFirstWord(props.line.line)})`,
         }}
