@@ -230,7 +230,7 @@ input,
   .journey-graphic .MuiTypography-root,
   .journey-header,
   .journey-details,
-  .line-status {
+  .line-status-entry span {
     font-size: 0.825rem;
   }
 
