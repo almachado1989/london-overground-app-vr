@@ -1,7 +1,6 @@
 import { Box, Grid, useMediaQuery, useTheme } from "@mui/material"
 import { Outlet, useLocation } from "react-router-dom"
 import StationSelector from "../components/StationSelector"
-import { boxStyle } from "../../styles/styleVariables"
 import Nav from "../components/Nav"
 import { Suspense, useEffect, useMemo, useRef } from "react"
 import { lazy } from "react"
@@ -15,10 +14,6 @@ export default function Layout(props) {
   const theme = useTheme()
   const query = useMediaQuery(theme.breakpoints.down("sm"))
   const { pathname } = useLocation()
-  function style() {
-    if (query) return { marginTop: "56px" }
-  }
-
   useEffect(() => {
     gridRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
   }, [props.loading])
@@ -27,9 +22,27 @@ export default function Layout(props) {
     if (pathname === "/") window.scrollTo(0, 0)
   }, [pathname])
 
+  function gridStyle() {
+    if (query) return { marginTop: "56px" }
+  }
+
+  function boxHeight() {
+    if (query) return "calc(100dvh - 56px)"
+    else return "100dvh"
+  }
+
+  const boxStyle = {
+    height: boxHeight(),
+    backgroundColor: "primary.dark",
+    position: "sticky",
+    top: 0,
+    display: "grid",
+    alignContent: "space-between",
+  }
+
   return (
     <>
-      <Grid className="sidebar" item xs={12} sm="auto" sx={style}>
+      <Grid className="sidebar" item xs={12} sm="auto" sx={gridStyle}>
         <Box sx={boxStyle}>
           {props.stations && props.stationFrom && props.stationTo && (
             <StationSelector

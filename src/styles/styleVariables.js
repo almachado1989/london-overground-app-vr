@@ -36,15 +36,6 @@ export const searchButtonStyle = {
   },
 }
 
-export const boxStyle = {
-  height: "100dvh",
-  backgroundColor: "primary.dark",
-  position: "sticky",
-  top: 0,
-  display: "grid",
-  alignContent: "space-between",
-}
-
 export const checkboxStyle = {
   textTransform: "capitalize",
   color: "white",
