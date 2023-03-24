@@ -18,7 +18,7 @@ export default function Nav(props) {
         backgroundColor: theme.palette.primary.light,
       }}
     >
-      <Toolbar>
+      <Toolbar sx={{ maxWidth: "100vw" }}>
         <IconButton
           aria-label="home"
           onClick={() => navigate("/")}

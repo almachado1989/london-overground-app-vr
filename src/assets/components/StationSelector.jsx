@@ -76,12 +76,12 @@ export default function StationSelector(props) {
           onClick={
             props.journeyNow
               ? () => {
-                  props.searchRoute(props.stationFrom, props.stationTo)
                   navigate("/search")
+                  props.searchRoute(props.stationFrom, props.stationTo)
                 }
               : () => {
-                  props.searchLater(props.journeyTime.format(), true)
                   navigate("/search")
+                  props.searchLater(props.journeyTime.format(), true)
                 }
           }
           sx={searchButtonStyle}

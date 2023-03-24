@@ -157,6 +157,7 @@ function App() {
               path="/"
               element={
                 <Layout
+                  loading={loading}
                   stations={stations}
                   stationTo={stationTo}
                   stationFrom={stationFrom}
@@ -171,7 +172,6 @@ function App() {
                   setModes={setModes}
                   timeIsDeparting={timeIsDeparting}
                   settimeIsDeparting={settimeIsDeparting}
-                  loading={loading}
                 />
               }
             >
