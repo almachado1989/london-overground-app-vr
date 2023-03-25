@@ -1,5 +1,5 @@
 export const datePickerStyle = {
-  width: 300,
+  maxWidth: 300,
   "& .MuiInputBase-formControl": {
     color: "white",
   },
