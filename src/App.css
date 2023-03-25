@@ -247,4 +247,7 @@ input,
   .graphic-inner {
     padding-inline: 1rem;
   }
+  .sidebar .MuiBox-root {
+    min-height: auto;
+  }
 }

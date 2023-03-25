@@ -2,7 +2,7 @@ import TextField from "@mui/material/TextField"
 import Autocomplete from "@mui/material/Autocomplete"
 export default function Dropdown(props) {
   const style = {
-    width: 300,
+    maxWidth: 300,
     "&.Mui-focused .MuiInputLabel-outlined": {
       color: "white",
     },
