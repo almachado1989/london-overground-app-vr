@@ -1,16 +1,17 @@
 import "./App.css"
 import { MODES } from "./variables/global"
+import stationsJson from "../stations.json"
 import { useEffect, useState, createContext } from "react"
+import { addDays, padNumber } from "./functions/helpers"
 import dayjs from "dayjs"
 import utc from "dayjs/plugin/utc"
 import { Grid } from "@mui/material"
-import { addDays, padNumber } from "./functions/helpers"
 import { Route, Routes } from "react-router-dom"
 import Home from "./assets/pages/Home"
 import Search from "./assets/pages/Search"
 import Layout from "./assets/pages/Layout"
 import NotFound from "./assets/pages/NotFound"
-import stationsJson from "../stations.json"
+
 export const ModesContext = createContext(null)
 
 function App() {

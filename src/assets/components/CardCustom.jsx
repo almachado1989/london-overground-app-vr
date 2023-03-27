@@ -17,16 +17,17 @@ export default function CardCustom(props) {
   const modes = useContext(ModesContext)
 
   function handleClick() {
-    const stationTo = props.stations.filter((station) => {
+    const [stationTo] = props.stations.filter((station) => {
       return station.stopName === props.card.station
     })
+    props.setStationTo(stationTo)
     if (props.location && modes.length > 0) {
-      props.setStationTo(stationTo[0])
-      props.searchRoute(props.stationFrom, stationTo[0])
+      props.searchRoute(props.stationFrom, stationTo)
       navigate("/search")
-    } else {
-      props.setStationTo(stationTo[0])
+    } else if (modes.length === 0) {
       props.setSnackbarOpen(true)
+    } else {
+      window.scrollTo(0, 0)
     }
   }
 
